@@ -3,10 +3,10 @@
 
 #### Html
 ```
-<div id="left">
-  <textarea id="textarea"></textarea>
+<div>                                  // 左边区域
+  <textarea id="textarea"></textarea>  // 放入一个textarea
 </div>
-<div id="right"></div>
+<div id="right"></div>                 // 右边区域
 ```
 
 #### CSS
@@ -24,8 +24,8 @@ window.onload = function() {
   let textarea = document.getElementById("textarea");
   let right = document.getElementById("right");
   textarea.oninput = function() {
-    let input = this.value;
-    right.innerHTML = input
+    let input = this.value;   // 关键代码，获取textarea的输入内容
+    right.innerHTML = input   // 关键代码，获取到的内容放入右边区域
   }
 }
 ```
